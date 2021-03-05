@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <script src="code.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
+    </head>
+    <h1>
+        <center>
+            Minesweeper
+        </center>
+    </h1>
+    <body>
+        <center>
+            <div id="timer">
+                00:00:00
+            </div>
+            <span id="moves">
+                Moves: 0
+            </span>
+        </center>
+    </body>
+    <br>
+    <body>
+        <center>
+            <div id="mine_field">
+            </div>
+        </center>
+    </body>
+    <br>
+    <body>
+        <center>
+            <div>
+                Minefield size
+                <div  id="xdisplay">
+                    X: 10
+                </div >
+                <input type="range" min="10" max="50" value="10" class="slider" id="xslider" oninput="displayValue(this)" autocomplete="off">
+                <div  id="ydisplay">
+                    Y: 10
+                </div>
+                <input type="range" min="10" max="50" value="10" class="slider" id="yslider" oninput="displayValue(this)" autocomplete="off"> 
+            </div>
+            <br>
+            <label for="diffuclty">Game diffuclty:</label>
+                <select name="diffuclty" id="diffuclty" autocomplete="off">
+                <option value="Easy">Easy</option>
+                <option value="Normal">Normal</option>
+                <option value="Hard">Hard</option>
+            </select> 
+            <br>
+            <br>
+            <button onclick="handleNewGameRequest()">
+                Start new game
+            </button>
+        </center>
+    </body>
+</html>
